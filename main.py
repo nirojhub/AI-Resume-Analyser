@@ -39,7 +39,7 @@ if analyze and uploaded_file:
         file_content = extract_text_from_file(uploaded_file)
 
         if not file_content.strip():
-            st.error("File does not have any contetnt")
+            st.error("File does not have any content.")
             st.stop()
 
         prompt = f"""Please analyze this resume and provide constructive feedback. 
@@ -69,4 +69,4 @@ if analyze and uploaded_file:
         st.markdown(response.choices[0].message.content)
 
     except Exception as e:
-        st.error(f"An erro occured: {str(e)}")
+        st.error(f"An error occured: {str(e)}")
